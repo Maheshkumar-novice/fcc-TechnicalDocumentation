@@ -13,21 +13,11 @@
 
       <ul id="nav-ul">
         <li><a href="#Introduction" class="nav-link">Introduction</a></li>
-        <li><a href="#Tools_And_Setup" class="nav-link">Tools And Setup</a></li>
         <li><a href="#Remember_This" class="nav-link">Remember This</a></li>
-        <li>
-          <a href="#Classes_And_Objects" class="nav-link"
-            >Classes And Objects</a
-          >
-        </li>
         <li><a href="#Variables" class="nav-link">Variables</a></li>
         <li><a href="#Literals" class="nav-link">Literals</a></li>
-        <li><a href="#Big_Guys" class="nav-link">Big Guys</a></li>
-        <li><a href="#Operators" class="nav-link">Operators</a></li>
         <li><a href="#Statements" class="nav-link">Statements</a></li>
         <li><a href="#Loops" class="nav-link">Loops</a></li>
-        <li><a href="#Methods" class="nav-link">Methods</a></li>
-        <li><a href="#To_Know_More" class="nav-link">To Know More</a></li>
       </ul>
     </nav>
     <!-- Main Section -->
@@ -36,159 +26,276 @@
       <section class="main-section" id="Introduction">
         <header><h2>Introduction</h2></header>
 
-        <p></p>
-
-        <code></code>
-
+        <p>
+          Ruby is a pure object-oriented programming language. It was created in
+          1993 by Yukihiro Matsumoto of Japan.
+        </p>
+        <p>
+          Ruby is "A Programmer's Best Friend". Ruby has features that are
+          similar to those of Smalltalk, Perl, and Python. Perl, Python, and
+          Smalltalk are scripting languages.
+        </p>
+        <p>
+          Smalltalk is a true object-oriented language. Ruby, like Smalltalk, is
+          a perfect object-oriented language. Using Ruby syntax is much easier
+          than using Smalltalk syntax.
+        </p>
+        <h3>Features:</h3>
         <ul>
-          <li></li>
+          <li>General Purpose and Interpreted</li>
+          <li>True Objce Oriented Programming Language</li>
+          <li>Server-Side Scripting Language</li>
+          <li>Clean and Easy syntax</li>
         </ul>
-      </section>
-
-      <!-- Tools and Setup -->
-      <section class="main-section" id="Tools_And_Setup">
-        <header><h2>Tools And Setup</h2></header>
-
-        <p></p>
-
-        <code></code>
-
-        <ul>
-          <li></li>
-        </ul>
+        <h3>Example:</h3>
+        <code>puts 'hello ruby'</code>
+        <p>Above code prints <strong>hello ruby</strong> to the screen</p>
       </section>
 
       <!-- Remember This -->
       <section class="main-section" id="Remember_This">
         <header><h2>Remember This</h2></header>
 
-        <p></p>
+        <h3>Extension:</h3>
+        <p>Ruby file Extension: <strong>.rb</strong></p>
 
-        <code></code>
+        <h3>Whitespace:</h3>
+        <p>
+          Whitespace characters such as spaces and tabs are generally ignored in
+          Ruby code, except when they appear in strings.
+        </p>
+        <code>a + b is interpreted as a+b ( Here a is a local variable)</code>
+        <code>a +b is interpreted as a(+b) ( Here a is a method call)</code>
 
-        <ul>
-          <li></li>
-        </ul>
-      </section>
+        <h3>Line Endings:</h3>
+        <p>
+          Ruby interprets semicolons and newline characters as the ending of a
+          statement.
+        </p>
+        <p>
+          However, if Ruby encounters operators, such as +, −, or backslash at
+          the end of a line, they indicate the continuation of a statement.
+        </p>
 
-      <!-- Classes and Objects -->
-      <section class="main-section" id="Classes_And_Objects">
-        <header><h2>Classes And Objects</h2></header>
+        <h3>Identifiers:</h3>
+        <p>Identifiers are names of variables, constants, and methods.</p>
+        <p>Ruby identifiers are case sensitive.</p>
+        <p>It means Ram and RAM are two different identifiers in Ruby.</p>
+        <p>
+          Ruby identifier names may consist of alphanumeric characters and the
+          underscore character ( _ ).
+        </p>
 
-        <p></p>
-
-        <code></code>
-
-        <ul>
-          <li></li>
-        </ul>
+        <h3>Comment:</h3>
+        <p>Single Line Comment:</p>
+        <code># I am a comment. Just ignore me.</code>
+        <p>Multi Line Comment:</p>
+        <div>
+          <code>=begin</code>
+          <code>This is a comment.</code>
+          <code>This is a comment, too.</code>
+          <code>=end</code>
+        </div>
       </section>
 
       <!-- Variables -->
       <section class="main-section" id="Variables">
         <header><h2>Variables</h2></header>
 
-        <p></p>
+        <p>
+          Variables are the memory locations, which hold any data to be used by
+          any program.
+        </p>
+        <p>
+          <em
+            >We are covering local variables only! See the reference at the end
+            to know more about other types!</em
+          >
+        </p>
 
-        <code></code>
-
-        <ul>
-          <li></li>
-        </ul>
+        <h3>Local Varibales</h3>
+        <p>Local variables begin with a lowercase letter or _.</p>
+        <p>
+          The scope of a local variable ranges from class, module, def, or do to
+          the corresponding end or from a block's opening brace to its close
+          brace {}.
+        </p>
+        <p>
+          When an uninitialized local variable is referenced, it is interpreted
+          as a call to a method that has no arguments.
+        </p>
+        <p>
+          Assignment to uninitialized local variables also serves as variable
+          declaration.
+        </p>
+        <p>
+          The variables start to exist until the end of the current scope is
+          reached.
+        </p>
+        <p>
+          he lifetime of local variables is determined when Ruby parses the
+          program.
+        </p>
+        <div>
+          <code>math = 100</code>
+          <code>science = "awesome"</code>
+        </div>
       </section>
 
       <!-- Literals -->
       <section class="main-section" id="Literals">
         <header><h2>Literals</h2></header>
 
-        <p></p>
+        <h3>Integers:</h3>
+        <p>Ruby supports integer numbers.</p>
+        <p>
+          An integer number can range from -2<sup>30</sup> to 2<sup>30</sup>-1
+          or -2<sup>62</sup> to 2<sup>62</sup>-1.
+        </p>
+        <div>
+          <code>123</code>
+          <code>-500</code>
+        </div>
 
-        <code></code>
+        <h3>Floats:</h3>
+        <p>Ruby supports floating numbers.</p>
+        <p>hey are also numbers but with decimals.</p>
+        <div>
+          <code>124.4</code>
+        </div>
 
-        <ul>
-          <li></li>
-        </ul>
-      </section>
-
-      <!-- Big Guys -->
-      <section class="main-section" id="Big_Guys">
-        <header><h2>Big Guys</h2></header>
-
-        <p></p>
-
-        <code></code>
-
-        <ul>
-          <li></li>
-        </ul>
-      </section>
-
-      <!-- Operators -->
-      <section class="main-section" id="Operators">
-        <header><h2>Operators</h2></header>
-
-        <p></p>
-
-        <code></code>
-
-        <ul>
-          <li></li>
-        </ul>
+        <h3>Strings:</h3>
+        <p>
+          Ruby strings are simply sequences of 8-bit bytes and they are objects
+          of class String.
+        </p>
+        <p>
+          Double-quoted strings allow substitution and backslash notation but
+          single-quoted strings don't allow substitution and allow backslash
+          notation only for \\ and \'
+        </p>
+        <div>
+          <code>puts 'escape using "\\"';</code>
+          <code>'That\'s right';</code>
+        </div>
+        <h4>Result:</h4>
+        <div>
+          <code>escape using "\"</code>
+          <code>That's right</code>
+        </div>
       </section>
 
       <!-- Statements -->
       <section class="main-section" id="Statements">
         <header><h2>Statements</h2></header>
 
-        <p></p>
-
-        <code></code>
-
+        <h3>if...else</h3>
         <ul>
-          <li></li>
+          <li>if expressions are used for conditional execution.</li>
+          <li>
+            The values false and nil are false, and everything else are true.
+          </li>
+          <li>Notice Ruby uses elsif, not else if nor elif.</li>
         </ul>
+        <div>
+          <code>x=1</code>
+          <code>if x &gt; 2</code>
+          <code style="padding-left: 20px">puts "x is greater than 2"</code>
+          <code>elsif x &lt;= 2 and x != 0</code>
+          <code style="padding-left: 20px">puts "x is 1"</code>
+          <code>else</code>
+          <code style="padding-left: 20px"
+            >puts "I can't guess the number"</code
+          >
+          <code>end</code>
+        </div>
+        <p>Result:</p>
+        <code>x is 1</code>
+
+        <h3>unless</h3>
+        <p>
+          Executes code if conditional is false. If the conditional is true,
+          code specified in the else clause is executed.
+        </p>
+        <div>
+          <code>x = 1</code>
+          <code>unless x &gt;=2</code>
+          <code style="padding-left: 20px">puts "x is less than 2"</code>
+          <code>else</code>
+          <code style="padding-left: 20px">puts "x is greater than 2"</code>
+          <code>end</code>
+        </div>
+        <p>Result:</p>
+        <code>x is less than 2</code>
       </section>
 
       <!-- Loops -->
       <section class="main-section" id="Loops">
         <header><h2>Loops</h2></header>
 
-        <p></p>
+        <h3>while</h3>
+        <p>
+          Executes code while conditional is true. A while loop's conditional is
+          separated from code by the reserved word do, a newline, backslash \,
+          or a semicolon ;.
+        </p>
+        <div>
+          <code>i = 0</code>
+          <code>num = 3</code>
+          <br />
+          <code>while i &lt; num do</code>
+          <code style="padding-left: 20px">puts i</code>
+          <code>end</code>
+        </div>
+        <p>Result:</p>
+        <div>
+          <code>0</code>
+          <code>1</code>
+          <code>2</code>
+        </div>
 
-        <code></code>
+        <h3>until</h3>
+        <p>
+          Executes code while conditional is false. An until statement's
+          conditional is separated from code by the reserved word do, a newline,
+          or a semicolon.
+        </p>
+        <div>
+          <code>i = 0</code>
+          <code>num = 3</code>
+          <br />
+          <code>until i &gt; num do</code>
+          <code style="padding-left: 20px">puts i</code>
+          <code>end</code>
+        </div>
+        <p>Result:</p>
+        <div>
+          <code>0</code>
+          <code>1</code>
+          <code>2</code>
+          <code>3</code>
+        </div>
 
-        <ul>
-          <li></li>
-        </ul>
-      </section>
-
-      <!-- Methods -->
-      <section class="main-section" id="Methods">
-        <header><h2>Methods</h2></header>
-
-        <p></p>
-
-        <code></code>
-
-        <ul>
-          <li></li>
-        </ul>
-      </section>
-
-      <!-- To Know More -->
-      <section class="main-section" id="To_Know_More">
-        <header><h2>To Know More</h2></header>
-
-        <p></p>
-
-        <code></code>
-
-        <ul>
-          <li></li>
-        </ul>
+        <h3>for</h3>
+        <p>Executes code once for each element in expression.</p>
+        <div>
+          <code>for i in 0..2</code>
+          <code style="padding-left: 20px">puts i</code>
+        </div>
+        <p>Result:</p>
+        <div>
+          <code>0</code>
+          <code>1</code>
+          <code>2</code>
+        </div>
+        <p id="learn">
+          To Learn Elaborately
+          <a href="https://www.tutorialspoint.com/ruby/ruby_quick_guide.htm"
+            >click here!</a
+          >
+        </p>
       </section>
     </main>
-
     <!-- Script -->
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   </body>
