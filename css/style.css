@@ -7,11 +7,18 @@
 
 html,
 body {
+  background-color: black;
   min-width: 290px;
+}
+
+img {
+  animation: rotation 50s ease;
+  animation-iteration-count: infinite;
 }
 
 /* NavBar */
 #navbar {
+  background-color: #eee;
   position: fixed;
   top: 0;
   left: 0;
@@ -45,10 +52,12 @@ body {
 #nav-ul li {
   width: 100%;
   padding: 20px;
+  text-align: center;
 }
 
 /* Main */
 #main-doc {
+  background-color: #eee;
   position: absolute;
   left: 0;
   right: 0;
@@ -58,21 +67,43 @@ body {
 }
 
 #main-doc section {
+  line-height: 35px;
   padding: 20px;
   margin: 20px;
 }
 
 #main-doc section ul {
+  font-size: 20px;
   margin: 10px;
+  margin-left: 10px;
+}
+
+#main-doc section li {
+  text-align: justify;
+  font-size: 20px;
+  margin-top: 10px;
   margin-left: 20px;
 }
 
 #main-doc section p {
+  text-align: justify;
+  font-size: 20px;
   margin: 10px;
 }
 
+#main-doc section h2 {
+  text-decoration: underline;
+  font-size: 30px;
+  margin: 10px;
+  margin-bottom: 20px;
+}
+
 #main-doc section h3 {
+  font-style: italic;
+  font-size: 25px;
+  text-align: center;
   margin-bottom: 10px;
+  margin-top: 20px;
 }
 
 #main-doc section code {
@@ -93,10 +124,16 @@ body {
   margin-top: 50px;
 }
 
+#main-doc section img {
+  display: block;
+  margin: 0 auto;
+}
+
 /* Media Queries Mobile */
 @media only screen and (max-width: 600px) {
   #navbar {
-    max-height: 380px;
+    max-height: 400px;
+    height: 400px;
     width: 100%;
     position: absolute;
     top: 0;
@@ -106,16 +143,22 @@ body {
   }
 
   #nav-ul {
+    padding-top: 10px;
     height: 280px;
   }
 
   #nav-ul a {
-    font-size: 15px;
+    font-size: 20px;
+  }
+
+  #nav-ul li {
+    margin: 0;
+    padding: 10px;
   }
 
   #main-doc {
     position: relative;
-    margin-top: 380px;
+    margin-top: 400px;
     margin-left: 0;
     border: 0;
   }
@@ -124,5 +167,18 @@ body {
 @media only screen and (max-width: 800px) {
   #main-doc {
     border: 0;
+  }
+}
+
+/* Animations */
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(-360deg);
   }
 }
